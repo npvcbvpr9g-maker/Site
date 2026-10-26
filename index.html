@@ -111,8 +111,11 @@
     <img src="ET Logo.jpeg" alt="Expedition Track Premium Logo" class="logo-img">
         <p class="tagline">Track • Record • Relive</p>
     <p class="subtitle">Your digital logbook for motorcycle adventures, overland expeditions and long-distance road trips.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Get it on Google Play</a>
-  </header>
+   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+  <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Get it on Google Play</a>
+  <a href="#" class="btn btn-appstore" target="_blank">Download on the App Store</a>
+</div>
+   </header>
 
   <div class="container">
     <section>
@@ -144,10 +147,17 @@
 
     <section class="cta-section">
       <h2>Ready to document your next adventure?</h2>
-      <p style="margin-bottom:1.5rem; color:#475569;">Available now on Google Play for just $4.99</p>
-      <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Download on Google Play</a>
-    </section>
-  </div>
+     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+  <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Download on Google Play</a>
+  <a href="#" class="btn btn-appstore" target="_blank">Download on the App Store</a>
+</div>
+   .btn-appstore {
+  background: linear-gradient(90deg, #000000, #333333);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.btn-appstore:hover {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+}  
 
   <footer>
     <p>© 2026 LionHeart1759 · Expedition Track Premium</p>
