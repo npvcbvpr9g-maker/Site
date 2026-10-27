@@ -12,33 +12,33 @@
       color: #1e293b;
       background: #f8fafc;
     }
-    header {
-      background: #000000;
+    .hero {
+      width: 100%;
+      height: 70vh;
+      min-height: 480px;
+      background: url('hero.jpg') center center / cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.35);
+      padding: 2rem 1.5rem;
       text-align: center;
-      padding: 4rem 1.5rem 3.5rem;
+      border-radius: 12px;
+      max-width: 800px;
     }
-    .logo-img {
-      width: 160px;
-      height: auto;
-      margin-bottom: 1.2rem;
-    }
-    .hero-title {
-      font-size: 2.6rem;
+    .hero h1 {
+      font-size: 2.8rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      line-height: 1.15;
+      margin-bottom: 1rem;
     }
-    .tagline {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #f59e0b;
-      margin: 0.5rem 0 1rem;
-    }
-    .hero-sub {
-      font-size: 1.15rem;
-      max-width: 680px;
-      margin: 0 auto 1.8rem;
-      color: #e2e8f0;
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
     .btn-group {
       display: flex;
@@ -56,12 +56,9 @@
       font-weight: 700;
       font-size: 1.05rem;
       box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
-      transition: transform 0.2s;
     }
-    .btn:hover { transform: translateY(-2px); }
     .btn-appstore {
       background: linear-gradient(90deg, #1a1a1a, #333);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
     .container { max-width: 1000px; margin: 0 auto; padding: 3.5rem 1.5rem; }
     section { margin-bottom: 4rem; }
@@ -90,27 +87,16 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       border-top: 4px solid #f59e0b;
     }
-    .card h3 {
-      margin-bottom: 0.6rem;
-      color: #0f172a;
-      font-size: 1.3rem;
-    }
+    .card h3 { margin-bottom: 0.6rem; color: #0f172a; font-size: 1.3rem; }
     .card:nth-child(2) { border-top-color: #0ea5e9; }
     .card:nth-child(3) { border-top-color: #10b981; }
     .card:nth-child(4) { border-top-color: #8b5cf6; }
-    .card:nth-child(5) { border-top-color: #f59e0b; }
-    .card:nth-child(6) { border-top-color: #0ea5e9; }
-    ul.features-list {
-      margin: 1rem 0 0 1.2rem;
-    }
-    ul.features-list li { margin-bottom: 0.4rem; }
     .cta-section {
       text-align: center;
       background: white;
       padding: 3.5rem 1.5rem;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      margin-bottom: 3rem;
     }
     footer {
       text-align: center;
@@ -123,92 +109,55 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="ET Logo.jpeg" alt="Expedition Track Premium Logo" class="logo-img">
-    <h1 class="hero-title">Expedition Track Premium</h1>
-    <p class="tagline">Track. Record. Relive.</p>
-    <p class="hero-sub">Every journey has a story. Make sure you capture yours.</p>
-    <div class="btn-group">
-      <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Get it on Google Play</a>
-      <a href="#" class="btn btn-appstore" target="_blank">Download on the App Store</a>
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>YOUR JOURNEY.<br>YOUR DATA.<br>YOUR STORY.</h1>
+      <p>The ultimate digital logbook for motorcycle touring, road trips, and overland expeditions.</p>
+      <div class="btn-group">
+        <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Download on Google Play</a>
+        <a href="#" class="btn btn-appstore" target="_blank">Download on the App Store</a>
+      </div>
     </div>
-  </header>
+  </div>
 
   <div class="container">
     <section>
       <p class="lead">Expedition Track Premium is a GPS-powered travel tracking and digital expedition logbook designed for motorcycle riders, vehicle travellers, road-trip enthusiasts, and overland adventurers. Record the actual routes you travel, monitor mileage, document the countries and towns you visit, manage expedition expenses, preserve location-tagged photographs, review detailed trip reports, and export your travel data.</p>
-      <p class="lead" style="font-weight:600; color:#0f172a;">From your departure point to your final destination, every kilometre becomes part of a permanent record of your journey.</p>
     </section>
 
     <section>
-      <h2>Start Your Journey</h2>
-      <p class="lead">Simple GPS trip tracking with Start, Pause, Resume, and End Trip controls. Capture the real road you travelled — not just a straight line between two points.</p>
+      <h2>Key Features</h2>
       <div class="features-grid">
         <div class="card">
-          <h3>📍 Real Route Replay</h3>
-          <p>Revisit recorded journeys on a map and follow the exact GPS path. Relive the roads, turns, and stretches of highway that made the adventure.</p>
-        </div>
-        <div class="card">
-          <h3>🌍 Location History</h3>
-          <p>Keep an organised record of the countries, cities, and towns you visit. Build a personal travel history that grows with every trip.</p>
+          <h3>📍 GPS Route Tracking</h3>
+          <p>Start, Pause, Resume, and End Trip. Capture the real road you travelled.</p>
         </div>
         <div class="card">
           <h3>📏 Mileage & Odometer</h3>
-          <p>Track daily kilometres, trip distances, starting and carried-forward odometer values, and total journey mileage.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Record Your Expedition</h2>
-      <div class="features-grid">
-        <div class="card">
-          <h3>💰 Trip Expenses</h3>
-          <p>Log fuel, tolls, ferries, hotels, meals, maintenance, repairs, and more in one place.</p>
-          <ul class="features-list">
-            <li>Fuel and refuelling</li>
-            <li>Road tolls & access charges</li>
-            <li>Hotels & accommodation</li>
-            <li>Meals, maintenance & repairs</li>
-          </ul>
+          <p>Track daily kilometres, trip distances, and total journey mileage.</p>
         </div>
         <div class="card">
-          <h3>💱 Multi-Currency Support</h3>
-          <p>Record expenses in local currencies as you cross borders and review them in your preferred reporting currency.</p>
+          <h3>💰 Expense Management</h3>
+          <p>Log fuel, tolls, hotels, meals, maintenance and more. Multi-currency support.</p>
         </div>
         <div class="card">
           <h3>📸 GPS Photo Diary</h3>
-          <p>Attach photographs with date, time, and location. Preserve the moments that made the journey meaningful.</p>
+          <p>Attach location-tagged photos to preserve the moments that matter.</p>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Relive & Review</h2>
-      <div class="features-grid">
         <div class="card">
           <h3>📊 Trip Reports</h3>
-          <p>Monthly, quarterly, and yearly reports bringing together kilometres, expenses, countries visited, and other journey statistics.</p>
+          <p>Monthly, quarterly and yearly reports of your journeys.</p>
         </div>
         <div class="card">
-          <h3>📶 Offline-Friendly Tracking</h3>
-          <p>Continue documenting your journey when network coverage is limited or unavailable — ideal for remote roads and overland travel.</p>
-        </div>
-        <div class="card">
-          <h3>📤 Export Your Data</h3>
-          <p>Export routes as GPX and structured data as CSV. Your journey belongs to you.</p>
+          <h3>📤 GPX & CSV Export</h3>
+          <p>Export your routes and data. Your journey belongs to you.</p>
         </div>
       </div>
-    </section>
-
-    <section>
-      <h2>Built For</h2>
-      <p class="lead">Motorcycle touring, long-distance expeditions, vehicle road trips, overland adventures, international multi-country travel, and personal travel archives.</p>
     </section>
 
     <section class="cta-section">
-      <h2>Your Journey. Your Data. Your Story.</h2>
-      <p style="margin-bottom:1.5rem; max-width:600px; margin-left:auto; margin-right:auto;">One app. Every journey. Available now for $4.99.</p>
+      <h2>Track. Record. Relive.</h2>
+      <p style="margin-bottom:1.5rem;">One app. Every journey. Available now for $4.99.</p>
       <div class="btn-group">
         <a href="https://play.google.com/store/apps/details?id=com.lionheart.expeditiontrack" class="btn" target="_blank">Download on Google Play</a>
         <a href="#" class="btn btn-appstore" target="_blank">Download on the App Store</a>
